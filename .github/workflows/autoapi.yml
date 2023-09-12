@@ -1,14 +1,8 @@
 #Automatic call to the API to keep alive, encrypted version
-name: MSO_E5_Dev_AutoRenew
+name: rainingtacos
 
 on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
-  #  branches: 
-  #    - master
+  workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '0/57 9-16 * * *'
